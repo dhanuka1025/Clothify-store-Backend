@@ -1,4 +1,7 @@
 package edu.icet.crm.repository;
 
-public interface ProductRepository {
+import edu.icet.crm.entity.ProductEntity;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ProductRepository extends CrudRepository<ProductEntity,Integer> {
 }
