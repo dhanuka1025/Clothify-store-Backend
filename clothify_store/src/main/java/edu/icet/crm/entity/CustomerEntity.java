@@ -1,7 +1,6 @@
 package edu.icet.crm.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +9,9 @@ import lombok.Setter;
 @Setter
 @Table(name = "customer")
 public class CustomerEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer Id;
     private String first_name;
     private String last_name;
     private String email;

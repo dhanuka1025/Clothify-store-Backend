@@ -24,11 +24,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAllproducts() {
+    public List<Product> getAllProducts() {
         ArrayList<Product> productList = new ArrayList<>();
         productRepository.findAll().forEach(productEntity -> {
             productList.add(mapper.convertValue(productEntity, Product.class));
         });
         return productList;
+    }
+
+    @Override
+    public void deleteProduct(Integer Id) {
+        productRepository.deleteById(Id);
     }
 }

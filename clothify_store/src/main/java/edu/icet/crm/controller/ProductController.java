@@ -13,13 +13,20 @@ import java.util.List;
 public class ProductController {
 
     private final ProductService productService;
-    @PostMapping
+
+
+    @PostMapping("add-product")
     Product saveProduct( @RequestBody Product product){
         return productService.save(product);
     }
 
-    @GetMapping
-    List<Product> getAllproducts(){
-        return productService.getAllproducts();
+    @GetMapping("get-all-products")
+    List<Product> getAllProducts(){
+        return productService.getAllProducts();
+    }
+
+    @DeleteMapping("delete-product")
+    public void deleteProduct(@PathVariable Integer Id){
+        productService.deleteProduct(Id);
     }
 }
