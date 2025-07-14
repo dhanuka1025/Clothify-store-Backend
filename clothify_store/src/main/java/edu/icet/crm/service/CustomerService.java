@@ -1,11 +1,11 @@
 package edu.icet.crm.service;
 
-import edu.icet.crm.dto.Customer;
+import edu.icet.crm.model.User;
 
 public interface CustomerService {
-    Customer save(Customer customer);
+    User save(User user);
 
     void deleteCustomer(Integer Id);
 
-    void updateCustomer(Customer customer);
+    void updateCustomer(User user);
 }

@@ -1,6 +1,6 @@
 package edu.icet.crm.service;
 
-import edu.icet.crm.dto.Product;
+import edu.icet.crm.model.Product;
 
 import java.util.List;
 

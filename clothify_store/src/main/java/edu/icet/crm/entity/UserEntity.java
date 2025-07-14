@@ -5,13 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "products")
-public class ProductEntity {
+@Table(name = "customer")
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private double price;
-    private String category;
-    private String photo;
+    private String email;
+    private String password;
+    @ManyToOne
+    private RoleEntity role;
 }
